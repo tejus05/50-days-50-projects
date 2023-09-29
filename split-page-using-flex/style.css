@@ -1,0 +1,80 @@
+@import url('https://fonts.googleapis.com/css2?family=Roboto:wght@400;700&display=swap');
+
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+  font-family: 'Roboto',arial,sans-serif;
+}
+html,body {
+  height: 100%;
+  width: 100%;
+  overflow: hidden;
+}
+.container{
+  display: flex;
+  align-items: center;
+  height: 100%;
+  width: 100%;
+}
+.left,
+.right{
+  flex: 1;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  height: 100%;
+  width: 50%;
+  position: relative;
+  transition: all ease 1000ms;
+}
+.left{
+  background: url('https://store.storeimages.cdn-apple.com/4668/as-images.apple.com/is/iphone-13-finish-select-202207-pink?wid=5120&hei=2880&fmt=p-jpg&qlt=80&.v=1693063160403') no-repeat center/cover;
+}
+.right{
+  background: url('https://www.oneplus.com/content/dam/oasis/page/2023/global/home/salami-share.jpg') no-repeat center/cover;
+}
+h1{
+  position: absolute;
+  left: 50%;
+  top: 35%;
+  transform: translateX(-50%);
+  font-size: 4rem;
+  color: white;
+}
+a{
+  position: absolute;
+  text-decoration: none;
+  color: white;
+  font-size: 2rem;
+  font-weight: bold;
+  top: 50%;
+  border: solid white 0.3rem;
+  padding: 1rem;
+  transition: transform ease 0.3s;
+}
+.left a:hover{
+  transform: scale(1.05);
+}
+.right a:hover{
+  transform: scale(1.05);
+
+}
+.left:before{
+  content: '';
+  height: 100%;
+  width: 100%;
+  background-color: rgba(0, 0, 0, 0.5);
+}
+.right:before{
+  content: '';
+  height: 100%;
+  width: 100%;
+  background-color: rgba(0, 0, 0, 0.5);
+}
+.container.left-hover .left{
+  flex: 2;
+}
+.container.right-hover .right{
+  flex: 2;
+}
