@@ -1,0 +1,89 @@
+@import url('https://fonts.googleapis.com/css2?family=Roboto:wght@400;700&display=swap');
+
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+  font-family: 'Roboto',arial,sans-serif;
+}
+html,body {
+  height: 100%;
+  width: 100%;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  overflow: hidden;
+  background-color: steelblue;
+  color: white;
+  height: 100vh;
+}
+.container{
+  background-color: rgba(0, 0, 0, 0.4);
+  padding: 20px 40px;
+  border-radius: 5px;
+}
+h1{
+  text-align: center;
+  margin-bottom: 30px;
+}
+a{
+  text-decoration: none;
+  color: lightblue;
+}
+.form-control{
+  position: relative;
+  margin: 20px 0 40px;
+  width: 300px;
+}
+input{
+  background-color: transparent;
+  border: none;
+  border-bottom: 2px white solid;
+  display: block;
+  width: 100%;
+  padding: 15px 0;
+  font-size: 18px;
+  color: white;
+}
+input:focus,
+input:valid{
+  outline: 0;
+  border-bottom-color: lightblue;
+}
+.button{
+  cursor: pointer;
+  display: inline-block;
+  width: 100%;
+  background: lightblue;
+  padding: 15px;
+  border: none;
+  font-size: 16px;
+  border-radius: 5px;
+}
+.button:active{
+  transform: scale(0.98);
+}
+.button:focus
+{
+  outline: 0;
+}
+.text{
+  margin-top: 30px;
+}
+label{
+  position: absolute;
+  top: 15px;
+  left: 0;
+}
+
+span{
+  display: inline-block;
+  font-size: 18px;
+  min-width: 5px;
+  transition: all 0.3s cubic-bezier(0.68,-0.55,0.265,1.55);
+}
+input:focus + label span,
+input:valid + label span{
+  color: lightblue;
+  transform: translateY(-30px);
+}
