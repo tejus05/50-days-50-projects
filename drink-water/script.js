@@ -47,6 +47,6 @@ function updateBigCup() {
   }
   else {
     remained.style.visibility = 'visible';
-    litres.innerText = `${2 - (250 * fullCups / 1000)}`;
+    litres.innerText = `${2 - (250 * fullCups / 1000)}L`;
   }
 }
